@@ -9,7 +9,7 @@ class GreetingController {
 
     @MessageMapping("/hello")
     @SendTo("/topic/greetings")
-    fun greeting(HelloMessage: HelloMessage): Greeting {
-        return Greeting("Hello, ${HelloMessage.name}!")
+    fun greeting(helloMessage: HelloMessage): Greeting {
+        return Greeting("Hello, ${helloMessage.name}!")
     }
 }
